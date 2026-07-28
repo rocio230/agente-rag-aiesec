@@ -9,8 +9,8 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 
-from ingest import load_documents
-from config import HF_TOKEN
+from src.ingest import load_documents
+from src.config import HF_TOKEN
 
 
 chunks = load_documents()
