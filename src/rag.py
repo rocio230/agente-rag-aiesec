@@ -10,6 +10,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 
 from ingest import load_documents
+from config import HF_TOKEN
 
 
 chunks = load_documents()
@@ -33,6 +34,7 @@ retriever = db.as_retriever(
 
 endpoint = HuggingFaceEndpoint(
     repo_id="Qwen/Qwen2.5-7B-Instruct",
+    huggingfacehub_api_token=HF_TOKEN,
     max_new_tokens=512,
     temperature=0
 )
