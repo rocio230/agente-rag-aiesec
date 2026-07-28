@@ -4,3 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 HF_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
